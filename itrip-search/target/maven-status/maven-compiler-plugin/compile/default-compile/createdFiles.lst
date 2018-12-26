@@ -1,0 +1,10 @@
+cn\solr\test\TestDao.class
+cn\solr\entity\ItripHotelVO.class
+cn\solr\controller\HotelListController.class
+cn\solr\test\Test.class
+cn\solr\entity\Hotel.class
+cn\solr\dao\HotelDao.class
+cn\solr\dao\BaseDao.class
+cn\solr\service\SearchHotelService.class
+cn\solr\dao\impl\HotelDaoImpl.class
+cn\solr\service\SearchHotelServiceImpl.class
