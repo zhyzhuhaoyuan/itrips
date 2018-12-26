@@ -75,19 +75,21 @@ public class CommentController {
             "<p>100000 : token失效，请重登录</p>")
     @RequestMapping(value = "/getcount/{cityId}", method = RequestMethod.GET)
     @ResponseBody
-    public Dto<ItripCountCommentVo> getcount(@PathVariable Integer cityId, HttpServletRequest request) {
-        ItripCountCommentVo itripCountCommentVo = new ItripCountCommentVo();
+    public Dto<ItripCountCommentVo> getCount(@PathVariable Integer cityId) {
+
+        ItripCountCommentVo itripCountCommentVo=null;
+        List<ItripCountCommentVo> itripCountCommentVos=null;
         try {
-            Map<String ,Object> param = new HashMap();
-            param.put("hotelId", cityId);
-            itripCountCommentVo.setAllcomment(itripCommentService.getItripCommerntNum(param));
-            param.put("isOk",0);
-            itripCountCommentVo.setImprove(itripCommentService.getItripCommerntNum(param));
-            param.put("isOk",1);
-            itripCountCommentVo.setIsOk(itripCommentService.getItripCommerntNum(param));
-            param.remove("isOk");
-            param.put("isHavingImg","1");
-            itripCountCommentVo.setIsHavingImg(itripCommentService.getItripCommerntNum(param));
+            itripCountCommentVos=itripCommentService.getItripCommerntNum(cityId);
+            for (ItripCountCommentVo countCommentVo : itripCountCommentVos) {
+                itripCountCommentVos=new ArrayList();
+                itripCountCommentVo= new ItripCountCommentVo();
+                itripCountCommentVo.setIsok(countCommentVo.getIsok());
+                itripCountCommentVo.setHavingimg(countCommentVo.getHavingimg());
+                itripCountCommentVo.setAllcomment(countCommentVo.getAllcomment());
+                itripCountCommentVo.setImprove(countCommentVo.getImprove());
+                itripCountCommentVos.add(itripCountCommentVo);
+            }
             return DtoUtil.returnSuccess("查询评论数量成功", itripCountCommentVo);
         } catch (Exception e) {
             e.printStackTrace();

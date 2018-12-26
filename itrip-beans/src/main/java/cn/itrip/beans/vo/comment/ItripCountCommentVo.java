@@ -9,9 +9,9 @@ public class ItripCountCommentVo {
     @ApiModelProperty("[必填，注：接收数字类型] 是否满意（0：有待改善 1：值得推荐）")
     private Integer improve;
     @ApiModelProperty("[必填，注：接收数字类型] 是否满意（0：有待改善 1：值得推荐）")
-    private Integer isOk;
+    private Integer isok;
     @ApiModelProperty("[必填，注：接收数字类型] 是否包含图片(当用户上传评论时检测)0:无图片 1:有图片")
-    private Integer isHavingImg;
+    private Integer havingimg;
     @ApiModelProperty("[必填，注：接收数字类型] 是否所有的评论")
     private Integer allcomment;
 
@@ -23,20 +23,20 @@ public class ItripCountCommentVo {
         this.improve = improve;
     }
 
-    public Integer getIsOk() {
-        return isOk;
+    public Integer getIsok() {
+        return isok;
     }
 
-    public void setIsOk(Integer isOk) {
-        this.isOk = isOk;
+    public void setIsok(Integer isOk) {
+        this.isok = isOk;
     }
 
-    public Integer getIsHavingImg() {
-        return isHavingImg;
+    public Integer getHavingimg() {
+        return havingimg;
     }
 
-    public void setIsHavingImg(Integer isHavingImg) {
-        this.isHavingImg = isHavingImg;
+    public void setHavingimg(Integer isHavingImg) {
+        this.havingimg = isHavingImg;
     }
 
     public Integer getAllcomment() {

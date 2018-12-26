@@ -1,6 +1,7 @@
 package cn.itrip.service.comment;
 
 import cn.itrip.beans.pojo.ItripComment;
+import cn.itrip.beans.vo.comment.ItripCountCommentVo;
 import cn.itrip.dao.comment.ItripCommentMapper;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +21,7 @@ public class ItripCommentServiceImpl implements ItripCommentService {
     }
 
     @Override
-    public Integer getItripCommerntNum(Map<String, Object> param) throws Exception {
-        return itripCommentMapper.getItripCommerntNum(param);
+    public List<ItripCountCommentVo> getItripCommerntNum(Integer hotelId) throws Exception {
+        return itripCommentMapper.getItripCommerntNum(hotelId);
     }
 }
