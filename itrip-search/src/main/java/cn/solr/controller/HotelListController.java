@@ -1,6 +1,6 @@
 package cn.solr.controller;
 
-import cn.itrip.beans.dtos.Dto;
+import cn.itrip.beans.dto.Dto;
 import cn.itrip.beans.pojo.ItripAreaDic;
 import cn.itrip.beans.pojo.ItripComment;
 import cn.itrip.beans.pojo.ItripLabelDic;
@@ -11,8 +11,7 @@ import cn.itrip.beans.vo.hotel.SearchHotCityVO;
 import cn.itrip.common.DtoUtil;
 import cn.itrip.common.EmptyUtils;
 import cn.itrip.common.Page;
-import cn.itrip.service.areadic.ItripAreaDicService;
-import cn.itrip.service.labeldic.ItripLabelDicService;
+import cn.solr.entity.ItripHotelVO;
 import cn.solr.service.SearchHotelService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -65,14 +64,14 @@ public class HotelListController {
             "<p>10202 : 系统异常,获取失败</p>")
     @RequestMapping(value = "/searchItripHotelListByHotCity", produces = "application/json", method = RequestMethod.GET)
     @ResponseBody
-    public Dto<Page<ItripListCommentVO>> searchItripHotelListByHotCity(@RequestBody SearchHotCityVO vo) {
+    public Dto<ItripHotelVO> searchItripHotelListByHotCity(@RequestBody SearchHotCityVO vo) {
         if (EmptyUtils.isNotEmpty(vo)) {
             DtoUtil.returnFail("type不能为空", "10201");
         }
         Map<String ,Object> param=new HashMap<>();
         param.put("cityId",vo.getCityId());
-        List list=null;
-        return list;
+        List<ItripHotelVO> list=searchHotelService.searchItripHotelByCity(vo.getCityId().toString(),6);
+        return DtoUtil.returnDataSuccess(list);
     }
 
 }
