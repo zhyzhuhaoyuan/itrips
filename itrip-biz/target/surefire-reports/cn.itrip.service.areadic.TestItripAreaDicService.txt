@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: cn.itrip.service.areadic.TestItripAreaDicService
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.316 s - in cn.itrip.service.areadic.TestItripAreaDicService

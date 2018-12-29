@@ -31,7 +31,7 @@ public class TestItripUserMapper {
                 "applicationContext.xml");
         ItripCommentMapper itripCommentMapper=ctx.getBean(ItripCommentMapper.class);
         try {
-            List<ItripCountCommentVo> itripUser = itripCommentMapper.getItripCommerntNum(1);
+            List<ItripCountCommentVo> itripUser = itripCommentMapper.getItripCommerntNum(Long.highestOneBit(1));
             for (ItripCountCommentVo itripCountCommentVo : itripUser) {
                 System.out.println(itripCountCommentVo.getAllcomment() + ">>>>231111111" );
             }

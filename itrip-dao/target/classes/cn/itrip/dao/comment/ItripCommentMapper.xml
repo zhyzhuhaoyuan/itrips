@@ -22,4 +22,16 @@
             and hotelId=#{hotelId}
         </trim>
     </select>
+
+    <select id="getItripCommentPage" resultType="cn.itrip.beans.pojo.ItripComment">
+      select * from itrip_comment where hotelId=#{hotelId} and isHavingImg=#{isHavingImg} and isOk=#{isOk} limit #{pageNo},#{pageSize};
+    </select>
+
+    <!--<select id="getItripCountCount" resultType="_int">
+      select count(*) as curPage from itrip_comment ;
+    </select>-->
+
+    <select id="getItripImageImgUrl" resultType="cn.itrip.beans.pojo.ItripImage" parameterType="java.util.Map">
+      select * from itrip_image where targetId=#{targetId};
+    </select>
 </mapper>
