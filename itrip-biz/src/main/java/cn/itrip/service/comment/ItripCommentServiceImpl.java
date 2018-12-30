@@ -3,6 +3,7 @@ package cn.itrip.service.comment;
 import cn.itrip.beans.pojo.ItripComment;
 import cn.itrip.beans.pojo.ItripImage;
 import cn.itrip.beans.vo.comment.ItripCountCommentVo;
+import cn.itrip.common.Page;
 import cn.itrip.dao.comment.ItripCommentMapper;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +30,11 @@ public class ItripCommentServiceImpl implements ItripCommentService {
     @Override
     public List<ItripComment> getItripCommentPage(Map<String, Object> param) throws Exception {
         return itripCommentMapper.getItripCommentPage(param);
+    }
+
+    @Override
+    public Integer getItripCommerntNum2(Map<String, Object> param) {
+        return itripCommentMapper.getItripCommerntNum2(param);
     }
 
     @Override

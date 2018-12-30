@@ -116,13 +116,31 @@ public class CommentController {
         List<ItripComment> itripComments=new ArrayList<>();
         ItripListCommentVO itripListCommentVO=new ItripListCommentVO();
         List<ItripCountCommentVo> itripCountCommentVos=new ArrayList();
+
         Page page=new Page();
         try {
             Map<String,Object> param=new HashMap<>();
             param.put("hotelId",vo.getHotelId());
             System.out.println("hotelId>>>>>>>"+vo.getHotelId());
-            param.put("isHavingImg",1);
-            param.put("isOk",1);
+            if (vo.getIsHavingImg().equals(-1)){
+                param.put("isHavingImg",null);
+            }
+            if (vo.getIsHavingImg().equals(1)){
+                param.put("isHavingImg",1);
+            }
+            if (vo.getIsHavingImg().equals(0)){
+                param.put("isHavingImg",0);
+            }
+
+            if (vo.getIsOk().equals(1)){
+                param.put("isOk",1);
+            }
+            if (vo.getIsOk().equals(-1)){
+                param.put("isOk",null);
+            }
+            if (vo.getIsOk().equals(0)){
+                param.put("isOk",0);
+            }
             System.out.println("isOk>>>>>>>"+vo.getIsOk());
             param.put("pageSize",vo.getPageSize());
             param.put("pageNo",vo.getPageNo());
@@ -131,11 +149,9 @@ public class CommentController {
 
             /*Integer curPage=itripCommentService.getItripCountCount();*/
 
-            itripCountCommentVos=itripCommentService.getItripCommerntNum(vo.getHotelId());
-            for (ItripCountCommentVo countCommentVo : itripCountCommentVos) {
-
-                page.setTotal(countCommentVo.getAllcomment());
-            }
+            Integer totel=itripCommentService.getItripCommerntNum2(param);
+            page.setTotal(totel);
+            System.out.println("当前总次数》》》》》》》》》》》》》》》》"+totel);
 
             page.setBeginPos(0);
             page.setCurPage(vo.getPageNo());

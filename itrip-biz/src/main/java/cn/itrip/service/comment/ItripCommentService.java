@@ -15,6 +15,8 @@ public interface ItripCommentService {
 
     public List<ItripComment> getItripCommentPage(Map<String,Object> param) throws Exception;
 
+    public Integer getItripCommerntNum2(Map<String,Object> param);
+
     /*public Integer getItripCountCount() ;*/
 
     public List<ItripImage> getItripImageImgUrl(Long targetId) throws Exception;
