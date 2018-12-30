@@ -1,10 +1,12 @@
 package cn.itrip.service.hotelorder;
 
 import cn.itrip.beans.pojo.ItripHotelOrder;
+import cn.itrip.common.Page;
 import cn.itrip.dao.hotelorder.ItripHotelOrderMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,5 +23,10 @@ public class ItripHotelOrderServiceImpl implements ItripHotelOrderService{
     @Override
     public Integer itripHotelOrderStore(Map<String, Object> param) {
         return itripHotelOrderMapper.itripHotelOrderStore(param);
+    }
+
+    @Override
+    public List<ItripHotelOrder> itripHotelOrderList(Map<String, Object> param) throws Exception {
+        return itripHotelOrderMapper.itripHotelOrderList(param);
     }
 }

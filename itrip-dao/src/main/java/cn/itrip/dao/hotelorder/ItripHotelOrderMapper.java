@@ -10,4 +10,6 @@ public interface ItripHotelOrderMapper {
 
     public Integer itripHotelOrderStore(Map<String,Object> param);
 
+    public List<ItripHotelOrder> itripHotelOrderList(Map<String,Object> param) throws Exception;
+
 }

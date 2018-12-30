@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: cn.itrip.service.labeldic.TestItripLabelDicService
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.808 s - in cn.itrip.service.labeldic.TestItripLabelDicService
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.577 s <<< FAILURE! - in cn.itrip.service.labeldic.TestItripLabelDicService
+testGetItripLabelDicListByMap(cn.itrip.service.labeldic.TestItripLabelDicService)  Time elapsed: 0.577 s  <<< ERROR!
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Data source rejected establishment of connection,  message from server: "Too many connections")
+	at cn.itrip.service.labeldic.TestItripLabelDicService.testGetItripLabelDicListByMap(TestItripLabelDicService.java:23)
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Data source rejected establishment of connection,  message from server: "Too many connections")
+	at cn.itrip.service.labeldic.TestItripLabelDicService.testGetItripLabelDicListByMap(TestItripLabelDicService.java:23)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Data source rejected establishment of connection,  message from server: "Too many connections"
+	at cn.itrip.service.labeldic.TestItripLabelDicService.testGetItripLabelDicListByMap(TestItripLabelDicService.java:23)
+

@@ -1,4 +1,23 @@
 -------------------------------------------------------------------------------
 Test set: cn.itrip.controller.user.TestUserInfoController
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.73 s - in cn.itrip.controller.user.TestUserInfoController
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 4.488 s <<< FAILURE! - in cn.itrip.controller.user.TestUserInfoController
+testUserInfo(cn.itrip.controller.user.TestUserInfoController)  Time elapsed: 0.004 s  <<< ERROR!
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Data source rejected establishment of connection,  message from server: "Too many connections")
+	at cn.itrip.controller.user.TestUserInfoController.testGetItripUserLinkUserById(TestUserInfoController.java:32)
+	at cn.itrip.controller.user.TestUserInfoController.testUserInfo(TestUserInfoController.java:27)
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Data source rejected establishment of connection,  message from server: "Too many connections")
+	at cn.itrip.controller.user.TestUserInfoController.testGetItripUserLinkUserById(TestUserInfoController.java:32)
+	at cn.itrip.controller.user.TestUserInfoController.testUserInfo(TestUserInfoController.java:27)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Data source rejected establishment of connection,  message from server: "Too many connections"
+	at cn.itrip.controller.user.TestUserInfoController.testGetItripUserLinkUserById(TestUserInfoController.java:32)
+	at cn.itrip.controller.user.TestUserInfoController.testUserInfo(TestUserInfoController.java:27)
+
+testGetItripUserLinkUserById(cn.itrip.controller.user.TestUserInfoController)  Time elapsed: 0.003 s  <<< ERROR!
+org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Data source rejected establishment of connection,  message from server: "Too many connections")
+	at cn.itrip.controller.user.TestUserInfoController.testGetItripUserLinkUserById(TestUserInfoController.java:32)
+Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Data source rejected establishment of connection,  message from server: "Too many connections")
+	at cn.itrip.controller.user.TestUserInfoController.testGetItripUserLinkUserById(TestUserInfoController.java:32)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Data source rejected establishment of connection,  message from server: "Too many connections"
+	at cn.itrip.controller.user.TestUserInfoController.testGetItripUserLinkUserById(TestUserInfoController.java:32)
+
