@@ -3,12 +3,10 @@ package cn.itrip.controller;
 
 import cn.itrip.beans.dtos.Dto;
 import cn.itrip.beans.pojo.ItripComment;
+import cn.itrip.beans.pojo.ItripHotel;
 import cn.itrip.beans.pojo.ItripImage;
 import cn.itrip.beans.vo.ItripImageVO;
-import cn.itrip.beans.vo.comment.ItripCountCommentVo;
-import cn.itrip.beans.vo.comment.ItripListCommentVO;
-import cn.itrip.beans.vo.comment.ItripScoreCommentVO;
-import cn.itrip.beans.vo.comment.ItripSearchCommentVO;
+import cn.itrip.beans.vo.comment.*;
 import cn.itrip.common.DtoUtil;
 import cn.itrip.common.Page;
 import cn.itrip.common.ValidationToken;
@@ -198,6 +196,35 @@ public class CommentController {
         } catch (Exception e) {
             e.printStackTrace();
             return DtoUtil.returnFail("查询评论附带的图片失败", "100401");
+        }
+    }
+
+    @ApiOperation(value = "查询酒店详情（评论）", httpMethod = "GET",
+            protocols = "HTTP", produces = "application/json",
+            response = Dto.class, notes = "查询酒店详情（评论）" +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>错误码：</p>" +
+            "<p>100000 : token失效，请重登录</p>")
+    @RequestMapping(value = "/gethoteldesc/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public Dto<ItripHotelDescVO> gethoteldesc(@PathVariable Long id) {
+
+        ItripHotelDescVO itripCountCommentVo=new ItripHotelDescVO();
+        List<ItripHotelDescVO> itripHotelDescVOS=new ArrayList<>();
+        List<ItripHotel> itripHotels=new ArrayList<>();
+        try {
+            itripHotels=itripCommentService.getItripCommentHotel(id);
+            for (ItripHotel itripComment : itripHotels) {
+                itripCountCommentVo.setHotelId(itripComment.getId());
+                itripCountCommentVo.setHotelLevel(itripComment.getHotelLevel());
+                itripCountCommentVo.setHotelName(itripComment.getHotelName());
+                itripHotelDescVOS.add(itripCountCommentVo);
+            }
+
+            return DtoUtil.returnSuccess("查询酒店详情（评论）成功", itripCountCommentVo);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return DtoUtil.returnFail("查询酒店详情（评论）失败", "100401");
         }
     }
 

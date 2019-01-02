@@ -1,6 +1,7 @@
 package cn.itrip.service.comment;
 
 import cn.itrip.beans.pojo.ItripComment;
+import cn.itrip.beans.pojo.ItripHotel;
 import cn.itrip.beans.pojo.ItripImage;
 import cn.itrip.beans.vo.comment.ItripCountCommentVo;
 import cn.itrip.common.Page;
@@ -40,6 +41,11 @@ public class ItripCommentServiceImpl implements ItripCommentService {
     @Override
     public List<ItripImage> getItripImageImgUrl(Long targetId) throws Exception {
         return itripCommentMapper.getItripImageImgUrl(targetId);
+    }
+
+    @Override
+    public List<ItripHotel> getItripCommentHotel(Long id) throws Exception {
+        return itripCommentMapper.getItripCommentHotel(id);
     }
 
     /*@Override
