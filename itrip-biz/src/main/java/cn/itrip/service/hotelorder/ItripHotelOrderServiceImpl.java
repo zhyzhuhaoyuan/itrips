@@ -29,4 +29,14 @@ public class ItripHotelOrderServiceImpl implements ItripHotelOrderService{
     public List<ItripHotelOrder> itripHotelOrderList(Map<String, Object> param) throws Exception {
         return itripHotelOrderMapper.itripHotelOrderList(param);
     }
+
+    @Override
+    public List<ItripHotelOrder> itripHotelOrderInsert(Map<String, Object> param) throws Exception {
+        return itripHotelOrderMapper.itripHotelOrderInsert(param);
+    }
+
+    @Override
+    public List<ItripHotelOrder> itripHotelOrderId(Integer id) throws Exception {
+        return itripHotelOrderMapper.itripHotelOrderId(id);
+    }
 }

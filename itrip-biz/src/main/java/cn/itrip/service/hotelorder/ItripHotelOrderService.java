@@ -12,6 +12,9 @@ public interface ItripHotelOrderService {
 
     public List<ItripHotelOrder> itripHotelOrderList(Map<String,Object> param) throws Exception;
 
+    public List<ItripHotelOrder> itripHotelOrderInsert(Map<String,Object> param) throws Exception;
+
+    public List<ItripHotelOrder> itripHotelOrderId(Integer id) throws Exception;
 
 }
 

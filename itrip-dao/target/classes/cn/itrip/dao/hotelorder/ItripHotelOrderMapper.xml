@@ -113,4 +113,46 @@
         limit #{pageSize},#{pageNo};
     </select>
 
+    <insert id="itripHotelOrderInsert" parameterType="cn.itrip.beans.pojo.ItripHotelOrder">
+          insert into itrip_hotel_order(checkInDate,
+                              checkOutDate,
+                              count,
+                              hotelId,
+                              hotelName,
+                              invoiceHead,
+                              invoiceType,
+                              isNeedInvoice,
+                              linkUserName,
+                              noticeEmail,
+                              noticePhone,
+                              orderType,
+                              roomId,
+                              specialRequirement)
+    value(
+                              #{checkInDate},
+                              #{checkOutDate},
+                              #{count},
+                              #{hotelId},
+                              #{hotelName},
+                              #{invoiceHead},
+                              #{invoiceType},
+                              #{isNeedInvoice},
+                              #{linkUserName},
+                              #{noticeEmail},
+                              #{noticePhone},
+                              #{orderType},
+                              #{roomId},
+                              #{specialRequirement}
+      )
+    </insert>
+
+    <select id="itripHotelOrderId" resultType="cn.itrip.beans.pojo.ItripHotelOrder" parameterType="java.util.Map">
+        select * from itrip_hotel_order
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test=" id != null and id!=''">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
 </mapper>
