@@ -103,4 +103,8 @@
             </if>
         </trim>
     </select>
+
+    <select id="getItripCommenLabeOrder" resultType="cn.itrip.beans.pojo.ItripLabelDic" parameterType="java.util.Map">
+       select * from itrip_label_dic,itrip_order_link_user where itrip_label_dic.parentId=itrip_order_link_user.orderId;
+    </select>
 </mapper>

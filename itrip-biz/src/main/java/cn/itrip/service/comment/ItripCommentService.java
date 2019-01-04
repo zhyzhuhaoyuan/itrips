@@ -3,6 +3,7 @@ package cn.itrip.service.comment;
 import cn.itrip.beans.pojo.ItripComment;
 import cn.itrip.beans.pojo.ItripHotel;
 import cn.itrip.beans.pojo.ItripImage;
+import cn.itrip.beans.pojo.ItripLabelDic;
 import cn.itrip.beans.vo.comment.ItripCountCommentVo;
 import org.apache.ibatis.annotations.Param;
 
@@ -23,4 +24,6 @@ public interface ItripCommentService {
     public List<ItripImage> getItripImageImgUrl(Long targetId) throws Exception;
 
     public List<ItripHotel> getItripCommentHotel(Long id) throws Exception;
+
+    public List<ItripLabelDic> getItripCommenLabeOrder() throws Exception;
 }

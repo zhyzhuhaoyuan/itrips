@@ -132,7 +132,7 @@ public class UserhotelController {
             "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
             "<p>错误码：</p>" +
             "<p>100000 : token失效，请重登录</p>")
-    @RequestMapping(value = "/getvideodesc/{cityId}", method = RequestMethod.GET)
+    @RequestMapping(value = "//{cityId}", method = RequestMethod.GET)
     @ResponseBody
     public Dto<HotelVideoDescVO> getvideodesc(@PathVariable Integer cityId,HttpServletRequest request) {
         List<String> userLinkUserList = null;

@@ -5,6 +5,7 @@ import cn.itrip.beans.dtos.Dto;
 import cn.itrip.beans.pojo.ItripComment;
 import cn.itrip.beans.pojo.ItripHotel;
 import cn.itrip.beans.pojo.ItripImage;
+import cn.itrip.beans.pojo.ItripLabelDic;
 import cn.itrip.beans.vo.ItripImageVO;
 import cn.itrip.beans.vo.comment.*;
 import cn.itrip.common.DtoUtil;
@@ -228,5 +229,23 @@ public class CommentController {
         }
     }
 
+    @ApiOperation(value = "查询旅游类型列表", httpMethod = "GET",
+            protocols = "HTTP", produces = "application/json",
+            response = Dto.class, notes = "查询旅游类型列表" +
+            "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
+            "<p>错误码：</p>" +
+            "<p>100000 : token失效，请重登录</p>")
+    @RequestMapping(value = "/gettraveltype", method = RequestMethod.GET)
+    @ResponseBody
+    public Dto<ItripHotelDescVO> gettraveltype() {
+        List<ItripLabelDic> itripHotels=new ArrayList<>();
+        try {
+            itripHotels=itripCommentService.getItripCommenLabeOrder();
+            return DtoUtil.returnSuccess("查询旅游类型列表成功", itripHotels);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return DtoUtil.returnFail("查询旅游类型列表失败", "100401");
+        }
+    }
 
 }
