@@ -23,8 +23,17 @@ public class ItripComment implements Serializable {
             private Long createdBy;
             private Date modifyDate;
             private Long modifiedBy;
+            private String tripModeName;
 
-            public void setId (Long  id){
+    public String getTripModeName() {
+        return tripModeName;
+    }
+
+    public void setTripModeName(String tripModeName) {
+        this.tripModeName = tripModeName;
+    }
+
+    public void setId (Long  id){
                 this.id=id;
             }
 

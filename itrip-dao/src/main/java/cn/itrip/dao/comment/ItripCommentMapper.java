@@ -5,6 +5,7 @@ import cn.itrip.beans.pojo.ItripHotel;
 import cn.itrip.beans.pojo.ItripImage;
 import cn.itrip.beans.pojo.ItripLabelDic;
 import cn.itrip.beans.vo.comment.ItripCountCommentVo;
+import cn.itrip.beans.vo.order.ItripPersonalOrderRoomVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -26,4 +27,5 @@ public interface ItripCommentMapper {
     public List<ItripHotel> getItripCommentHotel(@Param(value = "id") Long id) throws Exception;
 
     public List<ItripLabelDic> getItripCommenLabeOrder() throws Exception;
+
 }

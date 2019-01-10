@@ -5,6 +5,7 @@ import cn.itrip.beans.pojo.ItripHotel;
 import cn.itrip.beans.pojo.ItripImage;
 import cn.itrip.beans.pojo.ItripLabelDic;
 import cn.itrip.beans.vo.comment.ItripCountCommentVo;
+import cn.itrip.common.Page;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -26,4 +27,6 @@ public interface ItripCommentService {
     public List<ItripHotel> getItripCommentHotel(Long id) throws Exception;
 
     public List<ItripLabelDic> getItripCommenLabeOrder() throws Exception;
+
+    public Page<ItripComment> queryItripLabelDicPageByMap(Map<String, Object> param, Integer pageNo, Integer pageSize)throws Exception;
 }

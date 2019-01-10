@@ -1,6 +1,7 @@
 package cn.itrip.dao.hotelorder;
 
 import cn.itrip.beans.pojo.ItripHotelOrder;
+import cn.itrip.beans.vo.order.ItripPersonalOrderRoomVO;
 import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Param;
 
@@ -17,5 +18,7 @@ public interface ItripHotelOrderMapper {
     public List<ItripHotelOrder> itripHotelOrderInsert(Map<String,Object> param) throws Exception;
 
     public List<ItripHotelOrder> itripHotelOrderId(@Param(value = "id")Integer id) throws Exception;
+
+    public ItripPersonalOrderRoomVO getItripOrdergeren(@Param(value = "id")Integer id) throws Exception;
 
 }

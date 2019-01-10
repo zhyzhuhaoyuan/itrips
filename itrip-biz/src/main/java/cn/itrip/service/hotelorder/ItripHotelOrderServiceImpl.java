@@ -1,6 +1,7 @@
 package cn.itrip.service.hotelorder;
 
 import cn.itrip.beans.pojo.ItripHotelOrder;
+import cn.itrip.beans.vo.order.ItripPersonalOrderRoomVO;
 import cn.itrip.common.Page;
 import cn.itrip.dao.hotelorder.ItripHotelOrderMapper;
 import org.springframework.stereotype.Service;
@@ -38,5 +39,10 @@ public class ItripHotelOrderServiceImpl implements ItripHotelOrderService{
     @Override
     public List<ItripHotelOrder> itripHotelOrderId(Integer id) throws Exception {
         return itripHotelOrderMapper.itripHotelOrderId(id);
+    }
+
+    @Override
+    public ItripPersonalOrderRoomVO getItripOrdergeren(Integer id) throws Exception {
+        return itripHotelOrderMapper.getItripOrdergeren(id);
     }
 }

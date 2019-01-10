@@ -110,57 +110,30 @@ public class CommentController {
     @RequestMapping(value = "/getcommentlist", method = RequestMethod.POST)
     @ResponseBody
     public Dto<ItripListCommentVO> getcommentlist(@RequestBody ItripSearchCommentVO vo) {
-
         List<ItripListCommentVO> itripListCommentVOS=new ArrayList<>();
-        List<ItripComment> itripComments=new ArrayList<>();
-        ItripListCommentVO itripListCommentVO=new ItripListCommentVO();
-        List<ItripCountCommentVo> itripCountCommentVos=new ArrayList();
-
         Page page=new Page();
         try {
             Map<String,Object> param=new HashMap<>();
             param.put("hotelId",vo.getHotelId());
-            System.out.println("hotelId>>>>>>>"+vo.getHotelId());
-            if (vo.getIsHavingImg().equals(-1)){
-                param.put("isHavingImg",null);
-            }
-            if (vo.getIsHavingImg().equals(1)){
-                param.put("isHavingImg",1);
-            }
-            if (vo.getIsHavingImg().equals(0)){
-                param.put("isHavingImg",0);
-            }
+            param.put("isHavingImg",vo.getIsHavingImg());
+            param.put("isOk",vo.getIsOk());
+            Page<ItripComment> page1=itripCommentService.queryItripLabelDicPageByMap(param,vo.getPageNo(),vo.getPageSize());
 
-            if (vo.getIsOk().equals(1)){
-                param.put("isOk",1);
-            }
-            if (vo.getIsOk().equals(-1)){
-                param.put("isOk",null);
-            }
-            if (vo.getIsOk().equals(0)){
-                param.put("isOk",0);
-            }
-            System.out.println("isOk>>>>>>>"+vo.getIsOk());
-            param.put("pageSize",vo.getPageSize());
-            param.put("pageNo",vo.getPageNo());
-            System.out.println("pageNo>>>>>>>"+vo.getPageNo());
-            itripComments=itripCommentService.getItripCommentPage(param);
+            page.setTotal(page1.getTotal());
+            page.setBeginPos(page1.getBeginPos());
+            page.setCurPage(page1.getCurPage());
+            page.setPageCount(page1.getPageCount());
+            page.setPageSize(page1.getPageSize());
 
-            /*Integer curPage=itripCommentService.getItripCountCount();*/
-
-            Integer totel=itripCommentService.getItripCommerntNum2(param);
-            page.setTotal(totel);
-            System.out.println("当前总次数》》》》》》》》》》》》》》》》"+totel);
-
-            page.setBeginPos(0);
-            page.setCurPage(vo.getPageNo());
-            page.setPageCount(vo.getPageSize());
-            page.setPageSize(vo.getPageSize());
-
-            System.out.println(itripComments+">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>itripComments");
-
-            for (ItripComment itripComment : itripComments) {
-                BeanUtils.copyProperties(itripComment,itripListCommentVO);
+            for (ItripComment itripComment : page1.getRows()) {
+                ItripListCommentVO itripListCommentVO=new ItripListCommentVO();
+                itripListCommentVO.setCheckInDate(itripComment.getCreationDate());
+                itripListCommentVO.setContent(itripComment.getContent());
+                itripListCommentVO.setTripModeName(itripComment.getTripModeName());
+                itripListCommentVO.setScore(itripComment.getScore());
+                itripListCommentVO.setId(itripComment.getId());
+                itripListCommentVO.setIsHavingImg(itripComment.getIsHavingImg());
+                itripListCommentVO.setCreationDate(itripComment.getCreationDate());
                 itripListCommentVOS.add(itripListCommentVO);
             }
             page.setRows(itripListCommentVOS);
@@ -183,11 +156,12 @@ public class CommentController {
     public Dto<ItripImageVO> getimg(@PathVariable Long commentId, HttpServletRequest request) {
         List<ItripImage> itripImages = new ArrayList<ItripImage>();
         List<ItripImageVO> itripImageVOS=new ArrayList<>();
-        ItripImageVO itripImageVO=new ItripImageVO();
+
 
         try {
             itripImages = itripCommentService.getItripImageImgUrl(commentId);
             for (ItripImage itripImage : itripImages) {
+                ItripImageVO itripImageVO=new ItripImageVO();
                 itripImageVO.setPosition(itripImage.getPosition());
                 itripImageVO.setImgUrl(itripImage.getImgUrl());
                 itripImageVOS.add(itripImageVO);

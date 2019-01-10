@@ -208,4 +208,20 @@ public class HotelOrderController {
         }
     }
 
+
+    @RequestMapping(value = "/getpersonalorderroominfo/{orderId}", produces = "application/json", method = RequestMethod.GET)
+    @ResponseBody
+    public Dto<ItripPersonalOrderRoomVO> getPersonalOrderRoominfo(@PathVariable Integer orderId) {
+
+        ItripPersonalOrderRoomVO itripPersonalOrderRoomVO = new ItripPersonalOrderRoomVO();
+        try {
+            itripPersonalOrderRoomVO = itripHotelOrderService.getItripOrdergeren(orderId);
+            itripPersonalOrderRoomVO.setCheckInWeek(2);
+            itripPersonalOrderRoomVO.setCheckOutWeek(3);
+        } catch (Exception e) {
+            DtoUtil.returnFail("系统异常", "10205");
+            e.printStackTrace();
+        }
+        return DtoUtil.returnSuccess("获取酒店评分成功",itripPersonalOrderRoomVO);
+    }
 }
