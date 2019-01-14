@@ -21,4 +21,6 @@ public interface ItripHotelOrderMapper {
 
     public ItripPersonalOrderRoomVO getItripOrdergeren(@Param(value = "id")Integer id) throws Exception;
 
+    public Integer itripCount(Map<String,Object> param)throws Exception;
+
 }

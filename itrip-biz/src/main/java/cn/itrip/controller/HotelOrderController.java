@@ -2,10 +2,13 @@ package cn.itrip.controller;
 
 
 import cn.itrip.beans.dtos.Dto;
+import cn.itrip.beans.pojo.ItripComment;
 import cn.itrip.beans.pojo.ItripHotelOrder;
+import cn.itrip.beans.pojo.ItripUser;
 import cn.itrip.beans.vo.order.*;
 import cn.itrip.common.DtoUtil;
 import cn.itrip.common.Page;
+import cn.itrip.common.ValidationToken;
 import cn.itrip.service.hotelorder.ItripHotelOrderService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -15,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,6 +33,9 @@ public class HotelOrderController {
     @Resource
     private ItripHotelOrderService itripHotelOrderService;
 
+    @Resource
+    private ValidationToken validationToken;
+
     @ApiOperation(value = "查询评论内容列表", httpMethod = "POST",
             protocols = "HTTP", produces = "application/json",
             response = Dto.class, notes = "查询评论内容列表" +
@@ -41,6 +48,7 @@ public class HotelOrderController {
 
         List<PreAddOrderVO> itripScoreCommentVOS = new ArrayList<>();
         PreAddOrderVO preAddOrderVO=new PreAddOrderVO();
+
             try {
                 Map param = new HashMap();
                 param.put("checkInDate", vo.getCheckInDate());
@@ -75,38 +83,36 @@ public class HotelOrderController {
             "<p>100000 : token失效，请重登录</p>")
     @RequestMapping(value = "/getpersonalorderlist", method = RequestMethod.POST)
     @ResponseBody
-    public Dto<Page<ItripListHotelOrderVO>> getpersonalorderlist(@RequestBody ItripSearchOrderVO vo) {
+    public Dto<ItripListHotelOrderVO> getpersonalorderlist(@RequestBody ItripSearchOrderVO vo,HttpServletRequest request) {
 
-        List<ItripHotelOrder> itripHotelOrders=new ArrayList<>();
         List<ItripListHotelOrderVO> itripListCommentVOS=new ArrayList<>();
         ItripListHotelOrderVO itripSearchOrderVO=new ItripListHotelOrderVO();
-
+        String tokenString = request.getHeader("token");
+        ItripUser currentUser = validationToken.getCurrentUser(tokenString);
         try {
             Map<String,Object> param=new HashMap<>();
-            if (vo.getOrderStatus()!=-1){
-                param.put("orderStatus",vo.getOrderStatus());
-            }
+            param.put("orderStatus",vo.getOrderStatus());
+            param.put("orderType", vo.getOrderType());
+            param.put("userId",currentUser.getId());
+            param.put("linkUserName",vo.getLinkUserName());
+            param.put("creationDate",vo.getEndDate());
+            param.put("orderNo",vo.getOrderNo());
+            param.put("modifyDate",vo.getStartDate());
 
-            param.put("pageSize",vo.getPageSize());
-            System.out.println(vo.getPageSize()+"vo.getPageSize()>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-
-            if (vo.getOrderType()!=-1) {
-                param.put("orderType", vo.getOrderType());
-            }
-            param.put("pageNo",vo.getPageNo());
-            System.out.println(vo.getPageNo()+"vo.getPageNo()>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-            itripHotelOrders=itripHotelOrderService.itripHotelOrderList(param);
+            System.out.println("linkUserName"+vo.getLinkUserName()+"creationDate"+vo.getEndDate()+"orderNo"+vo.getOrderNo()+"modifyDate"+vo.getStartDate());
+            Page<ItripHotelOrder> page1=itripHotelOrderService.queryItripLabelDicPageByMap(param,vo.getPageSize(),vo.getPageNo());
 
             Page page=new Page();
-            page.setBeginPos((vo.getPageNo()-1)*vo.getPageSize());
-            page.setCurPage(vo.getPageNo());
-            /*page.setPageCount((total + vo.getPageSize() - 1) /vo.getPageSize());*/
-            page.setPageCount(1);
-            page.setPageSize(vo.getPageSize());
+            page.setBeginPos(page1.getBeginPos());
+            page.setCurPage(page1.getCurPage());
+            page.setPageCount(page1.getPageCount());
+            page.setPageSize(page1.getPageSize());
+            page.setTotal(page1.getTotal());
 
-            System.out.println(itripHotelOrders+">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>itripComments");
+            System.out.println("beginpos"+page1.getBeginPos()+"curpage"+page1.getCurPage()+"total"+page1.getTotal()+"pageCount"+page1.getPageCount()+"sizepage"+page1.getPageSize());
 
-            for (ItripHotelOrder itripHotelOrder : itripHotelOrders) {
+
+            for (ItripHotelOrder itripHotelOrder : page1.getRows()) {
                 BeanUtils.copyProperties(itripHotelOrder,itripSearchOrderVO);
                 itripListCommentVOS.add(itripSearchOrderVO);
             }
