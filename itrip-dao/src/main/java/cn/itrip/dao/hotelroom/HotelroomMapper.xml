@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.itrip.dao.hotelroom.HotelroomMapper">
+    <select id="getItripHotelRommid" resultType="cn.itrip.beans.vo.hotelroom.ItripHotelRoomVO" parameterType="java.util.Map">
+        select * from itrip_hotel_room
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="isTimelyResponse != null">
+                and isTimelyResponse=#{isTimelyResponse}
+            </if>
+            <if test="hotelId != null">
+                and hotelId=#{hotelId}
+            </if>
+            <if test="isBook != null">
+                and isBook=#{isBook}
+            </if>
+            <if test="isHavingBreakfast != null">
+                and isHavingBreakfast=#{isHavingBreakfast}
+            </if>
+            <if test="roomBedTypeId != null">
+                and roomBedTypeId=#{roomBedTypeId}
+            </if>
+            <if test="payType != null">
+                and payType=#{payType}
+            </if>
+            <if test="isCancel != null">
+                and isCancel=#{isCancel}
+            </if>
+        </trim>
+
+    </select>
+</mapper>

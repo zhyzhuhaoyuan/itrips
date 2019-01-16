@@ -3,8 +3,11 @@ package cn.itrip.service.area;
 import cn.itrip.beans.pojo.ItripAreaDic;
 import cn.itrip.beans.pojo.ItripComment;
 import cn.itrip.beans.pojo.ItripHotel;
+import cn.itrip.beans.pojo.ItripHotelRoom;
+import cn.itrip.beans.vo.hotelroom.ItripHotelRoomVO;
 
 import java.util.List;
+import java.util.Map;
 
 public interface ItripHotService {
     public List<ItripAreaDic> getItripHotById(Integer isChina)throws Exception;

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: cn.itrip.service.areadic.TestItripAreaDicService
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.764 s <<< FAILURE! - in cn.itrip.service.areadic.TestItripAreaDicService
-testGetItripAreaDicListByMap(cn.itrip.service.areadic.TestItripAreaDicService)  Time elapsed: 1.231 s  <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.998 s <<< FAILURE! - in cn.itrip.service.areadic.TestItripAreaDicService
+testGetItripAreaDicListByMap(cn.itrip.service.areadic.TestItripAreaDicService)  Time elapsed: 0.848 s  <<< ERROR!
 org.springframework.transaction.CannotCreateTransactionException: Could not open JDBC Connection for transaction; nested exception is org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Data source rejected establishment of connection,  message from server: "Too many connections")
 	at cn.itrip.service.areadic.TestItripAreaDicService.testGetItripAreaDicListByMap(TestItripAreaDicService.java:24)
 Caused by: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Data source rejected establishment of connection,  message from server: "Too many connections")
