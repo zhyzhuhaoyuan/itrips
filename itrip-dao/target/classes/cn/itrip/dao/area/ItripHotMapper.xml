@@ -49,8 +49,8 @@
     <select id="getItripHotelfacilities" resultType="cn.itrip.beans.pojo.ItripHotel">
        select * from itrip_hotel
         <trim prefix="where" prefixOverrides="and | or">
-            <if test="provinceId!= null and provinceId!=''">
-                and provinceId=#{provinceId} limit 0,1;
+            <if test="id!= null and id!=''">
+                and id=#{id} limit 0,1;
             </if>
         </trim>
     </select>
@@ -58,8 +58,8 @@
     <select id="getItripHotelPolicy" resultType="cn.itrip.beans.pojo.ItripHotel" >
         select hotelPolicy from itrip_hotel
         <trim prefix="where" prefixOverrides="and | or">
-            <if test="provinceId!= null and provinceId!=''">
-                and provinceId=#{provinceId} limit 0,1;
+            <if test="id!= null and id!=''">
+                and id=#{id} limit 0,1;
             </if>
         </trim>
     </select>

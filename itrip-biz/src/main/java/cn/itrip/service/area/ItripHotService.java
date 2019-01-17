@@ -18,8 +18,8 @@ public interface ItripHotService {
 
     public List<String> getItripHotByName(Integer hotelId)throws Exception;
 
-    public ItripHotel getItripHotelfacilities(Integer provinceId)throws Exception;
+    public ItripHotel getItripHotelfacilities(Integer id)throws Exception;
 
-    public ItripHotel getItripHotelPolicy(Integer provinceId)throws Exception;
+    public ItripHotel getItripHotelPolicy(Integer id)throws Exception;
 
 }

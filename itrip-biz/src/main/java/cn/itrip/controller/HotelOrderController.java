@@ -36,9 +36,9 @@ public class HotelOrderController {
     @Resource
     private ValidationToken validationToken;
 
-    @ApiOperation(value = "查询评论内容列表", httpMethod = "POST",
+    @ApiOperation(value = "预生成订单信息", httpMethod = "POST",
             protocols = "HTTP", produces = "application/json",
-            response = Dto.class, notes = "查询评论内容列表" +
+            response = Dto.class, notes = "预生成订单信息" +
             "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
             "<p>错误码：</p>" +
             "<p>100000 : token失效，请重登录</p>")
@@ -57,6 +57,7 @@ public class HotelOrderController {
                 param.put("hotelId", vo.getHotelId());
                 param.put("roomId", vo.getRoomId());
                 List<ItripHotelOrder> itripHotelOrders = itripHotelOrderService.itripHotelOrderInfo(param);
+                System.out.println(itripHotelOrders.size()+">>>>>>>>>>>>>>>");
                 for (ItripHotelOrder itripHotelOrder : itripHotelOrders) {
                     BeanUtils.copyProperties(itripHotelOrder,preAddOrderVO);
                     itripScoreCommentVOS.add(preAddOrderVO);
@@ -68,10 +69,10 @@ public class HotelOrderController {
                 for (PreAddOrderVO itripScoreCommentVO : itripScoreCommentVOS) {
                     itripScoreCommentVO.setStore(score);
                 }
-            return DtoUtil.returnSuccess("查询评论内容列表成功", itripScoreCommentVOS);
+            return DtoUtil.returnSuccess("预生成订单信息成功", itripScoreCommentVOS);
         } catch (Exception e) {
             e.printStackTrace();
-            return DtoUtil.returnFail("查询评论内容列表失败", "100401");
+            return DtoUtil.returnFail("预生成订单信息失败", "100401");
         }
     }
 
@@ -85,8 +86,6 @@ public class HotelOrderController {
     @ResponseBody
     public Dto<ItripListHotelOrderVO> getpersonalorderlist(@RequestBody ItripSearchOrderVO vo,HttpServletRequest request) {
 
-        List<ItripListHotelOrderVO> itripListCommentVOS=new ArrayList<>();
-        ItripListHotelOrderVO itripSearchOrderVO=new ItripListHotelOrderVO();
         String tokenString = request.getHeader("token");
         ItripUser currentUser = validationToken.getCurrentUser(tokenString);
         try {
@@ -94,39 +93,25 @@ public class HotelOrderController {
             param.put("orderStatus",vo.getOrderStatus());
             param.put("orderType", vo.getOrderType());
             param.put("userId",currentUser.getId());
-            param.put("linkUserName",vo.getLinkUserName());
-            param.put("creationDate",vo.getEndDate());
-            param.put("orderNo",vo.getOrderNo());
-            param.put("modifyDate",vo.getStartDate());
+            param.put("orderNo", vo.getOrderNo());
+            param.put("linkUserName", vo.getLinkUserName());
+            param.put("startDate", vo.getStartDate());
+            param.put("endDate", vo.getEndDate());
 
             System.out.println("linkUserName"+vo.getLinkUserName()+"creationDate"+vo.getEndDate()+"orderNo"+vo.getOrderNo()+"modifyDate"+vo.getStartDate());
-            Page<ItripHotelOrder> page1=itripHotelOrderService.queryItripLabelDicPageByMap(param,vo.getPageSize(),vo.getPageNo());
-
-            Page page=new Page();
-            page.setBeginPos(page1.getBeginPos());
-            page.setCurPage(page1.getCurPage());
-            page.setPageCount(page1.getPageCount());
-            page.setPageSize(page1.getPageSize());
-            page.setTotal(page1.getTotal());
-
-            System.out.println("beginpos"+page1.getBeginPos()+"curpage"+page1.getCurPage()+"total"+page1.getTotal()+"pageCount"+page1.getPageCount()+"sizepage"+page1.getPageSize());
+            Page<ItripHotelOrder> page1=itripHotelOrderService.queryItripLabelDicPageByMap(param,vo.getPageNo(),vo.getPageSize());
 
 
-            for (ItripHotelOrder itripHotelOrder : page1.getRows()) {
-                BeanUtils.copyProperties(itripHotelOrder,itripSearchOrderVO);
-                itripListCommentVOS.add(itripSearchOrderVO);
-            }
-            page.setRows(itripListCommentVOS);
-            return DtoUtil.returnSuccess("查询个人酒店订单列表成功", page);
+            return DtoUtil.returnSuccess("查询个人酒店订单列表成功", page1);
         } catch (Exception e) {
             e.printStackTrace();
             return DtoUtil.returnFail("查询个人酒店订单列表失败", "100401");
         }
     }
 
-    @ApiOperation(value = "查询评论内容列表", httpMethod = "POST",
+    @ApiOperation(value = "添加订单", httpMethod = "POST",
             protocols = "HTTP", produces = "application/json",
-            response = Dto.class, notes = "查询评论内容列表" +
+            response = Dto.class, notes = "添加订单" +
             "<p>成功：success = ‘true’ | 失败：success = ‘false’ 并返回错误码，如下：</p>" +
             "<p>错误码：</p>" +
             "<p>100000 : token失效，请重登录</p>")
@@ -161,10 +146,10 @@ public class HotelOrderController {
                 BeanUtils.copyProperties(itripHotelOrder,itripAddHotelOrderVO1);
                 itripAddHotelOrderVO.add(itripAddHotelOrderVO1);
             }
-            return DtoUtil.returnSuccess("查询评论内容列表成功", itripAddHotelOrderVO);
+            return DtoUtil.returnSuccess("添加订单成功", itripAddHotelOrderVO);
         } catch (Exception e) {
             e.printStackTrace();
-            return DtoUtil.returnFail("查询评论内容列表失败", "100401");
+            return DtoUtil.returnFail("添加订单失败", "100401");
         }
     }
 

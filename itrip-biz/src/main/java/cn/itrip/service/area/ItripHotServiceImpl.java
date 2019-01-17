@@ -37,13 +37,13 @@ public class ItripHotServiceImpl implements ItripHotService {
     }
 
     @Override
-    public ItripHotel getItripHotelfacilities(Integer provinceId) throws Exception {
-        return itripHotMapper.getItripHotelfacilities(provinceId);
+    public ItripHotel getItripHotelfacilities(Integer id) throws Exception {
+        return itripHotMapper.getItripHotelfacilities(id);
     }
 
     @Override
-    public ItripHotel getItripHotelPolicy(Integer provinceId) throws Exception {
-        return itripHotMapper.getItripHotelPolicy(provinceId);
+    public ItripHotel getItripHotelPolicy(Integer id) throws Exception {
+        return itripHotMapper.getItripHotelPolicy(id);
     }
 
 

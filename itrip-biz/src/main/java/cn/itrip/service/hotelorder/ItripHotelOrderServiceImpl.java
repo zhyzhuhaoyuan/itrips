@@ -55,6 +55,8 @@ public class ItripHotelOrderServiceImpl implements ItripHotelOrderService{
 
     public Page<ItripHotelOrder> queryItripLabelDicPageByMap(Map<String,Object> param, Integer pageNo, Integer pageSize)throws Exception{
         Integer total = itripHotelOrderMapper.itripCount(param);
+        System.out.println(pageNo+"pageNo");
+        System.out.println(pageSize+"pageSize");
         pageNo = EmptyUtils.isEmpty(pageNo) ? Constants.DEFAULT_PAGE_NO : pageNo;
         pageSize = EmptyUtils.isEmpty(pageSize) ? Constants.DEFAULT_PAGE_SIZE : pageSize;
         Page page = new Page(pageNo, pageSize, total);

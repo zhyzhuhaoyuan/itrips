@@ -18,9 +18,9 @@ public interface ItripHotMapper {
 
     public List<String> getItripHotByName(@Param(value = "hotelId") Integer hotelId)throws Exception;
 
-    public ItripHotel getItripHotelfacilities(@Param(value = "provinceId") Integer provinceId)throws Exception;
+    public ItripHotel getItripHotelfacilities(@Param(value = "id") Integer id)throws Exception;
 
-    public ItripHotel getItripHotelPolicy(@Param(value = "provinceId") Integer provinceId)throws Exception;
+    public ItripHotel getItripHotelPolicy(@Param(value = "id") Integer id)throws Exception;
 
 
 }
