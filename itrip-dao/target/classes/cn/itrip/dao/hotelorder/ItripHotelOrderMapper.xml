@@ -173,7 +173,7 @@
         </trim>
     </select>
 
-    <select id="getItripOrdergeren" resultType="cn.itrip.beans.pojo.ItripHotelOrder" parameterType="java.util.Map">
+    <select id="getItripOrdergeren" resultType="cn.itrip.beans.vo.order.ItripPersonalOrderRoomVO" parameterType="java.util.Map">
         select address,bookingDays,checkInDate,checkOutDate,count,room.hotelId,hotelLevel,hotel.hotelName,hotelorder.id,isHavingBreakfast,linkUserName,payAmount,roomBedTypeName,roomId,room.payType,roomTitle,specialRequirement roomPayType
         from itrip_hotel hotel,itrip_hotel_order hotelorder,
           (select itrip_hotel_room.*,name roomBedTypeName from itrip_hotel_room,itrip_label_dic

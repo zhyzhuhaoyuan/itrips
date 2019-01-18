@@ -204,15 +204,22 @@ public class HotelOrderController {
     @ResponseBody
     public Dto<ItripPersonalOrderRoomVO> getPersonalOrderRoominfo(@PathVariable Integer orderId) {
 
-        ItripPersonalOrderRoomVO itripPersonalOrderRoomVO = new ItripPersonalOrderRoomVO();
-        try {
-            itripPersonalOrderRoomVO = itripHotelOrderService.getItripOrdergeren(orderId);
-            itripPersonalOrderRoomVO.setCheckInWeek(2);
-            itripPersonalOrderRoomVO.setCheckOutWeek(3);
-        } catch (Exception e) {
-            DtoUtil.returnFail("系统异常", "10205");
-            e.printStackTrace();
+        Dto<ItripPersonalOrderRoomVO> dto = null;
+
+        if (null == orderId || "".equals(orderId)) {
+            return DtoUtil.returnFail("请传递参数：orderId", "100529");
         }
-        return DtoUtil.returnSuccess("获取酒店评分成功",itripPersonalOrderRoomVO);
+        try {
+            ItripPersonalOrderRoomVO vo = itripHotelOrderService.getItripOrdergeren(orderId);
+            if (null != vo) {
+                dto = DtoUtil.returnSuccess("获取个人订单房型信息成功", vo);
+            } else {
+                dto = DtoUtil.returnFail("没有相关订单房型信息", "100530");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            dto = DtoUtil.returnFail("获取个人订单房型信息错误", "100531");
+        }
+        return dto;
     }
 }

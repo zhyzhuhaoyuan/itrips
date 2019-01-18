@@ -8,6 +8,7 @@ import cn.solr.entity.ItripHotelVO;
 import org.apache.solr.client.solrj.SolrQuery;
 
 import java.util.List;
+import java.util.Map;
 
 public class HotelDaoImpl implements HotelDao {
     public static String url = "http://localhost:8002/solr/hotel/";
@@ -27,5 +28,11 @@ public class HotelDaoImpl implements HotelDao {
         solrQuery.setRows(rows);
         List<ItripHotelVO> list=hotelcomment.queryList(solrQuery, ItripHotelVO.class);
         return list;
+    }
+
+    @Override
+    public List<ItripHotelVO> seaechItripHotelVoPage(Map<String, Object> param) {
+        SolrQuery solrQuery=new SolrQuery("destination"+param);
+        return null;
     }
 }

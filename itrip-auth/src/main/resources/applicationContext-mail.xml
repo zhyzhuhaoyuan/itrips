@@ -12,10 +12,10 @@
 
 
 	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-		<property name="host" value="smtp.qq.com"></property>
-		<property name="port" value="465"></property>
-		<property name="username" value="14395202@qq.com"></property>
-		<property name="password" value="84916yuan"></property>
+		<property name="host" value="smtp.163.com"></property>
+		<property name="port" value="25"></property>
+		<property name="username" value="isxiaohao113@163.com"></property>
+		<property name="password" value="zhuhaoyuansb"></property>
 		<!--<property name="protocol" value="smtp"></property>-->
 		<property name="defaultEncoding" value="UTF-8"></property>
 		<property name="javaMailProperties">
@@ -29,7 +29,7 @@
 	</bean>
 	
 	<bean id="activationMailMessage"  class="org.springframework.mail.SimpleMailMessage" scope="prototype">
-		<property name="from" value="14395202@qq.com"></property>
+		<property name="from" value="isxiaohao113@163.com"></property>
 		<property name="subject" value="【i旅行】请激活您的账户"></property>
 		<property name="text" value=""></property>		
 	</bean>
