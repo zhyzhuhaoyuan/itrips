@@ -12,6 +12,7 @@ import cn.itrip.common.DtoUtil;
 import cn.itrip.common.Page;
 import cn.itrip.common.ValidationToken;
 import cn.itrip.service.comment.ItripCommentService;
+import cn.itrip.service.image.ItripImageService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.log4j.Logger;
@@ -37,6 +38,9 @@ public class CommentController {
 
     @Resource
     private ItripCommentService itripCommentService;
+
+    @Resource
+    private ItripImageService imageService;
 
     @ApiOperation(value = "查询酒店评分", httpMethod = "GET",
             protocols = "HTTP", produces = "application/json",
@@ -220,6 +224,39 @@ public class CommentController {
             e.printStackTrace();
             return DtoUtil.returnFail("查询旅游类型列表失败", "100401");
         }
+    }
+
+    @RequestMapping(value = "/add", produces = "application/json", method = RequestMethod.POST)
+    @ResponseBody
+    public Dto<ItripAddCommentVO> add(@RequestBody ItripAddCommentVO itripAddCommentVO) {
+        ItripComment itripComment = new ItripComment();
+        int result = 0;
+        try {
+            BeanUtils.copyProperties(itripAddCommentVO,itripComment);
+            Integer count = itripCommentService.AddItripComment(itripComment);
+            Map param = new HashMap();
+            param.put("hotelId",itripAddCommentVO.getHotelId());
+            param.put("orderId",itripAddCommentVO.getOrderId());
+            param.put("productId",itripAddCommentVO.getProductId());
+            param.put("content",itripAddCommentVO.getContent());
+            itripComment = itripCommentService.getItripCommentByMap(param);
+            if (itripAddCommentVO.getItripImages()!=null){
+                for (ItripImage image : itripAddCommentVO.getItripImages()) {
+                    result =  imageService.addImgUrl(image);
+                }
+                if (result<1 || count < 1){
+                    return DtoUtil.returnSuccess("新增评论失败");
+                }
+            }else{
+                if (count < 1){
+                    return DtoUtil.returnSuccess("新增评论失败");
+                }
+            }
+        } catch (Exception e) {
+            DtoUtil.returnFail("系统异常", "10202");
+            e.printStackTrace();
+        }
+        return DtoUtil.returnSuccess("新增评论成功");
     }
 
 }

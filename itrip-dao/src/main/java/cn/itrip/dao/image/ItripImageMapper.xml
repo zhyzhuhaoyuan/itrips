@@ -11,4 +11,20 @@
             </if>
         </trim>
     </select>
+
+    <insert id="addImgUrl" parameterType="itripImage">
+        insert into itrip_image (type, targetId, "position", imgUrl) value (#{type},#{targetId},#{position},#{imgUrl})
+    </insert>
+
+    <select id="getItripImageListByMap" resultType="cn.itrip.beans.vo.ItripImageVO" parameterType="java.util.Map">
+        select * from itrip_image
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="targetId != null and targetId!=''">
+                and targetId=#{targetId}
+            </if>
+            <if test="type != null ">
+                and type=#{type} group by position;
+            </if>
+        </trim>
+    </select>
 </mapper>

@@ -29,4 +29,8 @@ public interface ItripCommentService {
     public List<ItripLabelDic> getItripCommenLabeOrder() throws Exception;
 
     public Page<ItripComment> queryItripLabelDicPageByMap(Map<String, Object> param, Integer pageNo, Integer pageSize)throws Exception;
+
+    public Integer AddItripComment(ItripComment itripComment);
+
+    public ItripComment getItripCommentByMap(Map<String, Object> param) throws Exception;
 }

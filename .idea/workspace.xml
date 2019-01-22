@@ -10,20 +10,53 @@
   <component name="ChangeListManager">
     <list default="true" id="8343f7dc-6091-4052-b2ca-c54e21d03002" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itrip-auth/src/main/resources/applicationContext-mail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/src/main/resources/applicationContext-mail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itrip-auth/target/classes/applicationContext-mail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/target/classes/applicationContext-mail.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itrip-auth/target/itrip-auth/WEB-INF/classes/applicationContext-mail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/target/itrip-auth/WEB-INF/classes/applicationContext-mail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/service/SmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/service/SmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/service/SmsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/service/SmsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-auth/target/classes/cn/itrip/auth/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/target/classes/cn/itrip/auth/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-auth/target/classes/cn/itrip/auth/service/SmsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/target/classes/cn/itrip/auth/service/SmsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-auth/target/itrip-auth/WEB-INF/classes/cn/itrip/auth/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/target/itrip-auth/WEB-INF/classes/cn/itrip/auth/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-auth/target/itrip-auth/WEB-INF/classes/cn/itrip/auth/service/SmsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/target/itrip-auth/WEB-INF/classes/cn/itrip/auth/service/SmsServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/itrip-auth/target/itrip-auth/WEB-INF/lib/itrip-dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-auth/target/itrip-auth/WEB-INF/lib/itrip-dao-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/HotelOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/HotelOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/UserhotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/UserhotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/image/ItripImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/image/ItripImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/image/ItripImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/image/ItripImageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/controller/HotelOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/controller/HotelOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/controller/UserhotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/controller/UserhotelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/comment/ItripCommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/comment/ItripCommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/comment/ItripCommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/comment/ItripCommentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/hotelorder/ItripHotelOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/hotelorder/ItripHotelOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/hotelorder/ItripHotelOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/hotelorder/ItripHotelOrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/image/ItripImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/image/ItripImageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/image/ItripImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/classes/cn/itrip/service/image/ItripImageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/controller/HotelOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/controller/HotelOrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/controller/UserhotelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/controller/UserhotelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/comment/ItripCommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/comment/ItripCommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/comment/ItripCommentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/comment/ItripCommentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/hotelorder/ItripHotelOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/hotelorder/ItripHotelOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/hotelorder/ItripHotelOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/hotelorder/ItripHotelOrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/image/ItripImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/image/ItripImageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/image/ItripImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/classes/cn/itrip/service/image/ItripImageServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/lib/itrip-dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/WEB-INF/lib/itrip-dao-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-biz/target/itrip-biz/logs/log.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/dao/HotelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/dao/HotelDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/dao/impl/HotelDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/dao/impl/HotelDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/image/ItripImageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/image/ItripImageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/image/ItripImageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/image/ItripImageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-dao/target/classes/cn/itrip/dao/comment/ItripCommentMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/target/classes/cn/itrip/dao/comment/ItripCommentMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-dao/target/classes/cn/itrip/dao/comment/ItripCommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/target/classes/cn/itrip/dao/comment/ItripCommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-dao/target/classes/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/target/classes/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-dao/target/classes/cn/itrip/dao/image/ItripImageMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/target/classes/cn/itrip/dao/image/ItripImageMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/itrip-dao/target/classes/cn/itrip/dao/image/ItripImageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/itrip-dao/target/classes/cn/itrip/dao/image/ItripImageMapper.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/itrip-auth/target/" />
@@ -55,17 +88,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="itripdb@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="itripdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="itripdb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="itripdb: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
     </expand>
     <select />
   </component>
@@ -74,47 +96,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HotelOrderController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/HotelOrderController.java">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="212" column="72" lean-forward="true" selection-start-line="212" selection-start-column="72" selection-end-line="212" selection-end-column="72" />
+            <state relative-caret-position="248">
+              <caret line="207" column="40" lean-forward="true" selection-start-line="207" selection-start-column="40" selection-end-line="207" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItripHotelOrderService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderService.java">
+      <file leaf-file-name="SmsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/service/SmsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="46">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItripHotelOrderServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderServiceImpl.java">
+      <file leaf-file-name="SmsServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/service/SmsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="-325">
+              <caret line="17" column="35" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItripHotelOrderMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.java">
+      <file leaf-file-name="CommentController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/CommentController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItripHotelOrderMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="175" column="96" selection-start-line="175" selection-start-column="96" selection-end-line="175" selection-end-column="96" />
+            <state relative-caret-position="-700">
+              <caret line="52" column="63" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -146,6 +162,7 @@
       <find>addhotelorder</find>
       <find>queryItripLabelDicPageByMap</find>
       <find>getItripOrdergeren</find>
+      <find>registerbyphone</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/itrip-search/pom.xml" />
         <option value="$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/entity/ItripHotelVO.java" />
         <option value="$PROJECT_DIR$/itrip-search/src/main/webapp/WEB-INF/web.xml" />
@@ -168,12 +184,7 @@
         <option value="$PROJECT_DIR$/itrip-beans/src/main/java/cn/itrip/beans/vo/comment/ItripCountCommentVo.java" />
         <option value="$PROJECT_DIR$/itrip-dao/src/test/java/cn/itrip/dao/user/TestItripUserMapper.java" />
         <option value="$PROJECT_DIR$/itrip-biz/src/test/cn/itrip/service/areadic/TestItripAreaDicService.java" />
-        <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentService.java" />
         <option value="$PROJECT_DIR$/itrip-beans/src/main/java/cn/itrip/beans/pojo/ItripComment.java" />
-        <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/CommentController.java" />
-        <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.xml" />
-        <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/UserhotelController.java" />
         <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotel/ItripHotelMapper.java" />
         <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotel/ItripHotelMapper.xml" />
         <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelroom/ItripHotelRoomService.java" />
@@ -185,7 +196,6 @@
         <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelroom/HotelroomMapper.xml" />
         <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelroom/HotelroomMapper.java" />
         <option value="$PROJECT_DIR$/itrip-biz/src/test/cn/itrip/service/userlinkuser/TestItripUserLinkUserService.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/72297946-a880-4aad-bbab-16a315979732/console.sql" />
         <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/area/ItripHotMapper.java" />
         <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/area/ItripHotService.java" />
         <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/area/ItripHotServiceImpl.java" />
@@ -193,12 +203,25 @@
         <option value="$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/dao/HotelDao.java" />
         <option value="$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/dao/impl/HotelDaoImpl.java" />
         <option value="$PROJECT_DIR$/itrip-auth/src/main/resources/applicationContext-mail.xml" />
+        <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentService.java" />
+        <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentServiceImpl.java" />
         <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.java" />
+        <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.xml" />
+        <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/image/ItripImageMapper.java" />
+        <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/image/ItripImageService.java" />
+        <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/image/ItripImageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/UserhotelController.java" />
+        <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/image/ItripImageMapper.xml" />
+        <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.xml" />
         <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/HotelOrderController.java" />
         <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderService.java" />
         <option value="$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.java" />
-        <option value="$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/72297946-a880-4aad-bbab-16a315979732/console.sql" />
+        <option value="$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/service/SmsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/service/SmsService.java" />
+        <option value="$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -247,9 +270,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="465" />
-    <option name="y" value="345" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="530" />
+    <option name="y" value="30" />
     <option name="width" value="1400" />
     <option name="height" value="820" />
   </component>
@@ -260,14 +283,67 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
               <item name="itrip" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-auth" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
@@ -324,6 +400,28 @@
               <item name="beans" type="462c0819:PsiDirectoryNode" />
               <item name="vo" type="462c0819:PsiDirectoryNode" />
               <item name="order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-beans" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-beans" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+              <item name="userinfo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
@@ -389,7 +487,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="itrip" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="comment" type="462c0819:PsiDirectoryNode" />
+              <item name="area" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
@@ -405,6 +503,17 @@
             <path>
               <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
               <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-biz" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
               <item name="itrip-dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -446,6 +555,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
               <item name="hotelorder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itrip" type="462c0819:PsiDirectoryNode" />
+              <item name="itrip-dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="itrip" type="b2602c69:ProjectViewProjectNode" />
@@ -807,7 +926,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -815,7 +936,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/itripbiz" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Itrip-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -1163,7 +1284,9 @@
       <workItem from="1547696534837" duration="5824000" />
       <workItem from="1547772095075" duration="7185000" />
       <workItem from="1547792914069" duration="1306000" />
-      <workItem from="1547798946673" duration="3777000" />
+      <workItem from="1547798946673" duration="11113000" />
+      <workItem from="1547858740312" duration="2923000" />
+      <workItem from="1548116834569" duration="2287000" />
     </task>
     <servers />
   </component>
@@ -1185,7 +1308,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203213000" />
+    <option name="totallyTimeSpent" value="215759000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1211,7 +1334,7 @@
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.22453083" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" visible="true" weight="0.382311" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.36233953" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952926" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3281027" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
@@ -1222,14 +1345,14 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.37945792" />
       <window_info anchor="bottom" id="Spring" order="8" weight="0.32952926" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49932975" weight="0.24393724" />
-      <window_info anchor="bottom" id="Database Console" order="9" weight="0.40798858" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.22922252" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.23592493" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" sideWeight="0.50396824" side_tool="true" weight="0.14678285" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="4" sideWeight="0.50396824" side_tool="true" weight="0.14678285" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Database Console" order="9" weight="0.40798858" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1248,97 +1371,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/area/ItripHotMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="22" column="73" selection-start-line="22" selection-start-column="73" selection-end-line="22" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/area/ItripHotMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/area/ItripHotService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/controller/HotelListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-157">
-          <caret line="25" column="39" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/service/SearchHotelService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/service/SearchHotelServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-beans/src/main/java/cn/itrip/beans/vo/hotel/ItripSearchDetailsHotelVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/entity/ItripHotelVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1032">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/dao/HotelDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="15" column="78" lean-forward="true" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/solr/solr-solrj/5.3.1/solr-solrj-5.3.1-sources.jar!/org/apache/solr/client/solrj/SolrQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/dao/impl/HotelDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="34" column="61" lean-forward="true" selection-start-line="34" selection-start-column="61" selection-end-line="34" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-beans/src/main/java/cn/itrip/beans/vo/hotel/SearchHotelVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-search/src/main/java/cn/solr/dao/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/controller/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-817">
@@ -1357,20 +1389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/UserhotelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4052">
-          <caret line="231" column="49" selection-start-line="231" selection-start-column="34" selection-end-line="231" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1428,13 +1446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1503,69 +1514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/CommentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="59" column="56" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="61" column="17" lean-forward="true" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/72297946-a880-4aad-bbab-16a315979732/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="62" column="91" selection-start-line="58" selection-end-line="62" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/HotelOrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="212" column="72" lean-forward="true" selection-start-line="212" selection-start-column="72" selection-end-line="212" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/itrip-beans/src/main/java/cn/itrip/beans/vo/order/ItripPersonalOrderRoomVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1573,17 +1521,195 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.java">
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="78" column="33" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/comment/ItripCommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="34" column="89" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="32" column="89" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/area/ItripHotService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/image/ItripImageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <caret line="13" column="95" selection-start-line="13" selection-start-column="95" selection-end-line="13" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/image/ItripImageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/HotelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/comment/ItripCommentMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4043">
+          <caret line="163" column="13" selection-start-line="163" selection-start-column="13" selection-end-line="163" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/image/ItripImageMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/image/ItripImageMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="14" column="95" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="21" column="84" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/72297946-a880-4aad-bbab-16a315979732/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="58" selection-start-line="58" selection-end-line="62" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/service/hotelorder/ItripHotelOrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="46" column="59" selection-start-line="46" selection-start-column="59" selection-end-line="46" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="21" column="84" selection-start-line="21" selection-start-column="84" selection-end-line="21" selection-end-column="84" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/itrip-dao/src/main/java/cn/itrip/dao/hotelorder/ItripHotelOrderMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="175" column="96" selection-start-line="175" selection-start-column="96" selection-end-line="175" selection-end-column="96" />
+        <state relative-caret-position="4500">
+          <caret line="180" column="90" selection-start-line="180" selection-start-column="80" selection-end-line="180" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/HotelOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="44" column="45" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/UserhotelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6450">
+          <caret line="284" column="1" selection-start-line="284" selection-start-column="1" selection-end-line="284" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-biz/src/main/java/cn/itrip/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-700">
+          <caret line="52" column="63" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/service/SmsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/service/SmsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-325">
+          <caret line="17" column="35" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-beans/src/main/java/cn/itrip/beans/vo/userinfo/ItripSearchUserLinkUserVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-beans/src/main/java/cn/itrip/beans/vo/userinfo/ItripAddUserLinkUserVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-beans/src/main/java/cn/itrip/beans/vo/userinfo/ItripModifyUserLinkUserVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-beans/src/main/java/cn/itrip/beans/vo/store/StoreVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-beans/src/main/java/cn/itrip/beans/vo/userinfo/ItripUserVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itrip-auth/src/main/java/cn/itrip/auth/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="207" column="40" lean-forward="true" selection-start-line="207" selection-start-column="40" selection-end-line="207" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

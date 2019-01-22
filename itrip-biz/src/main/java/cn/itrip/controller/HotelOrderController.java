@@ -202,7 +202,7 @@ public class HotelOrderController {
 
     @RequestMapping(value = "/getpersonalorderroominfo/{orderId}", produces = "application/json", method = RequestMethod.GET)
     @ResponseBody
-    public Dto<ItripPersonalOrderRoomVO> getPersonalOrderRoominfo(@PathVariable Integer orderId) {
+    public Dto<ItripPersonalOrderRoomVO> getPersonalOrderRoominfo(@PathVariable String orderId) {
 
         Dto<ItripPersonalOrderRoomVO> dto = null;
 
@@ -210,7 +210,7 @@ public class HotelOrderController {
             return DtoUtil.returnFail("请传递参数：orderId", "100529");
         }
         try {
-            ItripPersonalOrderRoomVO vo = itripHotelOrderService.getItripOrdergeren(orderId);
+            ItripPersonalOrderRoomVO vo = itripHotelOrderService.getItripOrdergeren(Long.valueOf(orderId));
             if (null != vo) {
                 dto = DtoUtil.returnSuccess("获取个人订单房型信息成功", vo);
             } else {

@@ -44,7 +44,7 @@ public class ItripHotelOrderServiceImpl implements ItripHotelOrderService{
     }
 
     @Override
-    public ItripPersonalOrderRoomVO getItripOrdergeren(Integer hotelid) throws Exception {
+    public ItripPersonalOrderRoomVO getItripOrdergeren(Long hotelid) throws Exception {
         return itripHotelOrderMapper.getItripOrdergeren(hotelid);
     }
 

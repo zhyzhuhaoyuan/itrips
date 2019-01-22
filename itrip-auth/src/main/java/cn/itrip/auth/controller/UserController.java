@@ -1,5 +1,6 @@
 package cn.itrip.auth.controller;
 
+
 import cn.itrip.auth.service.UserService;
 import cn.itrip.beans.dtos.Dto;
 import cn.itrip.beans.pojo.ItripUser;
@@ -14,6 +15,10 @@ import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 /**
@@ -74,6 +79,8 @@ public class UserController {
 		}
 		
 	}
+
+
 	
 	/**
 	 * 检查用户是否已注册
@@ -87,7 +94,7 @@ public class UserController {
 	public @ResponseBody
     Dto checkUser(
 			@ApiParam(name="name",value="被检查的用户名",defaultValue="test@bdqn.cn")
-			@RequestParam String name) {		
+			@RequestParam String name) {
 		try {	
 			if(!validEmail(name))
 				return  DtoUtil.returnFail("请使用正确的邮箱地址注册",ErrorCode.AUTH_ILLEGAL_USERCODE);
@@ -104,6 +111,67 @@ public class UserController {
 			return DtoUtil.returnFail(e.getMessage(), ErrorCode.AUTH_UNKNOWN);
 		}		
 	}
+
+	@ApiOperation(value="使用手机注册",httpMethod = "POST",
+			protocols = "HTTP", produces = "application/json",
+			response = Dto.class,notes="使用手机注册 ")
+	@RequestMapping(value="/registerbyphone",method=RequestMethod.POST,produces = "application/json")
+	public @ResponseBody
+	Dto doRegisterPhone(
+			@ApiParam(name="userVO",value="用户实体",required=true)
+			@RequestBody ItripUserVO userVO) {
+
+		//验证手机账号
+		if(!validPhone(userVO.getUserCode()))
+			return  DtoUtil.returnFail("请使用正确的手机号码注册",ErrorCode.AUTH_ILLEGAL_USERCODE);
+
+		try {
+			ItripUser user=new ItripUser();
+			user.setUserCode(userVO.getUserCode());
+			user.setUserPassword(userVO.getUserPassword());
+			user.setUserType(0);
+			user.setUserName(userVO.getUserName());
+//			user.setFlatID(userVO.getFlatID());
+//			user.setWeChat(userVO.getWeChat());
+//			user.setQQ(userVO.getQQ());
+//			user.setWeibo(userVO.getWeibo());
+//			user.setBaidu(userVO.getBaidu());
+			if (null == userService.findByUsername(user.getUserCode())) {
+				user.setUserPassword(MD5.getMd5(user.getUserPassword(), 32));
+				userService.itriptxCreateUserByPhone(user);
+				return DtoUtil.returnSuccess();
+			}else
+			{
+				return DtoUtil.returnFail("用户已存在，注册失败", ErrorCode.AUTH_USER_ALREADY_EXISTS);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return DtoUtil.returnFail(e.getMessage(), ErrorCode.AUTH_UNKNOWN);
+		}
+
+	}
+
+	@ApiOperation(value = "验证手机号码是否可以注册", httpMethod = "POST",
+			protocols = "HTTP",
+			response = Dto.class, notes = "验证手机号码")
+
+	@RequestMapping(value = "/checkUserPhone", method = RequestMethod.POST)
+	@ApiParam(name = "name", value = "手机号码", defaultValue = "15344470306")
+	public Dto validatePhoneForItripUser(@RequestParam String name, HttpServletRequest request) {
+		try {
+			if (!validPhone(name))
+				return DtoUtil.returnFail("请使用正确的电话号码注册", ErrorCode.AUTH_ILLEGAL_USERCODE);
+			ItripUser itripUser = userService.findByUsername(name);
+			if (itripUser != null) {
+				return DtoUtil.returnFail("用户已存在", ErrorCode.AUTH_USER_ALREADY_EXISTS);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return DtoUtil.returnFail("用户已存在", ErrorCode.AUTH_UNKNOWN);
+		}
+		return DtoUtil.returnSuccess("success");
+	}
+
 	
 	@ApiOperation(value="邮箱注册用户激活",httpMethod = "POST",
             protocols = "HTTP", produces = "application/json",
@@ -126,7 +194,40 @@ public class UserController {
 			e.printStackTrace();
 			return DtoUtil.returnFail("激活失败", ErrorCode.AUTH_ACTIVATE_FAILED);
 		}		
-	} 
+	}
+
+	@ApiOperation(value = "手机注册用户激活", httpMethod = "POST",
+			protocols = "HTTP", produces = "application/json",
+			response = Dto.class, notes = "邮箱激活")
+//    validatephone
+	@RequestMapping(value = "/validatephone", method = RequestMethod.PUT, produces = "application/json")
+	public Dto validatephone(
+			@ApiParam(name = "user", value = "注册邮箱地址", defaultValue = "test@bdqn.cn")
+			@RequestParam String user,
+			@ApiParam(name = "code", value = "激活码", defaultValue = "018f9a8b2381839ee6f40ab2207c0cfe")
+			@RequestParam String code) {
+		try {
+			if (validEmail(user)) {
+				if (userService.activate(user, code)) {
+					return DtoUtil.returnSuccess("激活成功");
+				} else {
+					return DtoUtil.returnSuccess("激活失败");
+				}
+			}else if (validPhone(user)) {
+				if (userService.validatePhone(user, code)) {
+					return DtoUtil.returnSuccess("激活成功");
+				} else {
+					return DtoUtil.returnSuccess("激活失败");
+				}
+			}else{
+				return DtoUtil.returnFail("激活失败", ErrorCode.AUTH_ACTIVATE_FAILED);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return DtoUtil.returnFail("激活失败", ErrorCode.AUTH_ACTIVATE_FAILED);
+		}
+	}
 	
 
 	/**			 *
@@ -141,7 +242,7 @@ public class UserController {
 	private boolean validEmail(String email){
 		
 		String regex="^\\s*\\w+(?:\\.{0,1}[\\w-]+)*@[a-zA-Z0-9]+(?:[-.][a-zA-Z0-9]+)*\\.[a-zA-Z]+\\s*$"  ;			
-		return Pattern.compile(regex).matcher(email).find();			
+		return Pattern.compile(regex).matcher(email).find();
 	}
 
 	/**

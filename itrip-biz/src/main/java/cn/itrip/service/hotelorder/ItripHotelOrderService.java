@@ -19,7 +19,7 @@ public interface ItripHotelOrderService {
 
     public List<ItripHotelOrder> itripHotelOrderId(Integer id) throws Exception;
 
-    public ItripPersonalOrderRoomVO getItripOrdergeren(@Param(value = "hotelid")Integer hotelid) throws Exception;
+    public ItripPersonalOrderRoomVO getItripOrdergeren(@Param(value = "hotelid")Long hotelid) throws Exception;
 
     public Integer itripCount(Map<String,Object> param)throws Exception;
 

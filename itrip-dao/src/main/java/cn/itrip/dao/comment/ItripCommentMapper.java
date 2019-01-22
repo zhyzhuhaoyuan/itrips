@@ -28,6 +28,9 @@ public interface ItripCommentMapper {
 
     public List<ItripLabelDic> getItripCommenLabeOrder() throws Exception;
 
+    public Integer AddItripComment(ItripComment itripComment);
+
+    public ItripComment getItripCommentByMap(Map<String, Object> param) throws Exception;
 
 
 }

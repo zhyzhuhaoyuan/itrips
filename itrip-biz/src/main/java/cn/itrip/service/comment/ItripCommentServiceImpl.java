@@ -69,6 +69,16 @@ public class ItripCommentServiceImpl implements ItripCommentService {
         return page;
     }
 
+    @Override
+    public Integer AddItripComment(ItripComment itripComment) {
+        return itripCommentMapper.AddItripComment(itripComment);
+    }
+
+    @Override
+    public ItripComment getItripCommentByMap(Map<String, Object> param) throws Exception {
+        return itripCommentMapper.getItripCommentByMap(param);
+    }
+
     /*@Override
     public Integer getItripCountCount()  {
         return itripCommentMapper.getItripCountCount();
